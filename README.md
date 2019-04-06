@@ -173,7 +173,7 @@ import java.rmi.Naming;
 public class Client1 {
     public static void main(String[] args) throws Exception{
         String url = "rmi://10.10.10.1:4396/Hello";
-        Hello hello = (Hello) Naming.lookup("Hello");
+        Hello hello = (Hello) Naming.lookup(url);
         String result = hello.sayhello("sijidou");
         int number = hello.add(777, 4396);
         System.out.println(result);
